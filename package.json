@@ -15,7 +15,7 @@
     ],
     "scripts": {
         "build": "hardhat compile",
-        "build:zk": "HARDHAT_ENABLE_ZKSYNC=1 hardhat compile",
+        "build:zk": "cross-env HARDHAT_ENABLE_ZKSYNC=1 hardhat compile",
         "build:ts": "rimraf dist && tsc -p tsconfig.prod.json",
         "build:ts:dev": "rimraf dist && tsc -p tsconfig.json",
         "test": "npm run test:hardhat && npm run test:L1 && npm run test:L2",
@@ -75,6 +75,7 @@
         "@types/yargs": "^17.0.33",
         "@typescript-eslint/eslint-plugin": "^8.35.0",
         "@typescript-eslint/parser": "^8.35.0",
+        "cross-env": "^7.0.3",
         "debug": "^4.4.1",
         "dotenv": "^16.5.0",
         "eslint": "^9.29.0",
